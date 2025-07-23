@@ -43,8 +43,67 @@ body {
   margin: 0;
 }
 
+main {
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+main h1 {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-gray-400);
+}
+
+a:hover {
+  color: var(--color-gray-500);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+
+  background-color: var(--color-gray-200);
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-gray-300);
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+nav ul {
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul a {
+  padding: 10px;
+  border-bottom: 1px solid var(--color-gray-200);
+
+  text-decoration: none;
+}
+
+nav ul a.active {
+  border: 1px solid var(--color-gray-200);
+}
+
+nav ul a:hover {
+  border-color: var(--color-gray-500);
 }
