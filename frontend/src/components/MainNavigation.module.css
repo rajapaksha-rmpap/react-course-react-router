@@ -3,7 +3,7 @@
   margin: auto;
   padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .list {
@@ -11,12 +11,23 @@
   gap: 1rem;
 }
 
-.list a {
+.list li a {
+  padding: 10px;
+  border-color: var(--color-primary-400);
+
   text-decoration: none;
   color: var(--color-primary-400);
 }
 
-.list a:hover,
-.list a.active {
+.list li a:hover {
+  border-bottom: 1px solid;
+  border-color: var(--color-primary-800);
+
   color: var(--color-primary-800);
+}
+
+.list li a.active {
+  border: 1px solid;
+
+  /* color: var(--color-primary-800); */
 }
