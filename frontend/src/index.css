@@ -92,3 +92,16 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.loading {
+  width: 100%;
+  height: 40px;
+  padding-inline: 10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  background-color: var(--color-primary-600);
+}

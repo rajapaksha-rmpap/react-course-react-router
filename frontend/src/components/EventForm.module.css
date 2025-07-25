@@ -1,4 +1,5 @@
 .form {
+  min-width: 30rem;
   max-width: 40rem;
   margin: 2rem auto;
 }
@@ -14,6 +15,11 @@
 .form textarea {
   font: inherit;
   padding: 0.25rem;
+}
+
+.form .error {
+  padding-bottom: 20px;
+  color: red;
 }
 
 .actions {
@@ -32,7 +38,7 @@
   border: none;
 }
 
-.actions button[type='button'] {
+.actions button[type="button"] {
   background-color: transparent;
   color: var(--color-gray-300);
 }
@@ -41,6 +47,17 @@
   background-color: var(--color-primary-300);
 }
 
-.actions button[type='button']:hover {
+.actions button[type="button"]:hover {
   background-color: var(--color-gray-800);
+}
+
+.errorHeader {
+  min-width: 30rem;
+  max-width: 40rem;
+  padding: 20px;
+
+  text-align: left;
+
+  background-color: indianred;
+  color: white;
 }
