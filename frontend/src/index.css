@@ -105,3 +105,7 @@ ul {
 
   background-color: var(--color-primary-600);
 }
+
+.error {
+  color: crimson;
+}

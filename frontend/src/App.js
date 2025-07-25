@@ -11,8 +11,10 @@ import EventDetailPage, {
 } from "./pages/EventDetail.jsx";
 import NewEventPage from "./pages/NewEvent.jsx";
 import EditEventPage from "./pages/EditEvent.jsx";
+import NewsletterPage from "./pages/Newsletter.jsx";
 
 import { action as newOrEditEventAction } from "./components/EventForm.js";
+import { action as newsletterSignupAction } from "./components/NewsletterSignup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,11 @@ const router = createBrowserRouter([
             action: newOrEditEventAction,
           },
         ],
+      },
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+        action: newsletterSignupAction,
       },
     ],
   },

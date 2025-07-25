@@ -3,6 +3,28 @@
   max-width: 40rem;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  background-color: #f4f3f1;
+  color: black;
+}
+
+.header .button:hover {
+  background-color: #dddbd8;
+}
+
 .list {
   display: flex;
   flex-direction: column;

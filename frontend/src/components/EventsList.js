@@ -5,7 +5,12 @@ import classes from "./EventsList.module.css";
 function EventsList({ events }) {
   return (
     <div className={classes.events}>
-      <h1>All Events</h1>
+      <div className={classes.header}>
+        <h1>All Events</h1>
+        <Link className={classes.button} to="new">
+          New Event
+        </Link>
+      </div>
       <ul className={classes.list}>
         {events.map((event) => (
           <li key={event.id} className={classes.item}>
