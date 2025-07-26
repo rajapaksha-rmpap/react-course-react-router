@@ -1,6 +1,7 @@
 const express = require("express");
 
 const { getAll, get, add, replace, remove } = require("../data/event");
+const { checkAuth } = require("../util/auth");
 const {
   isValidText,
   isValidDate,
@@ -10,9 +11,10 @@ const {
 const router = express.Router();
 
 router.get("/", async (req, res, next) => {
+  console.log(req.token);
   try {
     const events = await getAll();
-    setTimeout(() => res.json({ events: events }), 2000); // 2s delay
+    res.json({ events: events });
   } catch (error) {
     next(error);
   }
@@ -27,12 +29,15 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+router.use(checkAuth);
+
 router.post("/", async (req, res, next) => {
+  console.log(req.token);
   const data = req.body;
 
   let errors = {};
 
-  if (!isValidText(data.title) || data.title?.trim().length > 40) {
+  if (!isValidText(data.title)) {
     errors.title = "Invalid title.";
   }
 
@@ -49,7 +54,6 @@ router.post("/", async (req, res, next) => {
   }
 
   if (Object.keys(errors).length > 0) {
-    // status code 422 - Unprocessable Content
     return res.status(422).json({
       message: "Adding the event failed due to validation errors.",
       errors,
@@ -69,7 +73,7 @@ router.patch("/:id", async (req, res, next) => {
 
   let errors = {};
 
-  if (!isValidText(data.title) || data.title?.trim() > 40) {
+  if (!isValidText(data.title)) {
     errors.title = "Invalid title.";
   }
 
@@ -86,7 +90,6 @@ router.patch("/:id", async (req, res, next) => {
   }
 
   if (Object.keys(errors).length > 0) {
-    // status code 422 - Unprocessable Content
     return res.status(422).json({
       message: "Updating the event failed due to validation errors.",
       errors,

@@ -1,1 +1,12 @@
-{"events":[{"title":"Summer Trip","image":"https://beautyharmonylife.com/wp-content/uploads/2014/12/image-1.jpg","date":"2025-08-15","description":"Annual trip in August","id":"5eccdd81-0ed3-465a-b8df-9c5a28603ebe"},{"title":"Presentation","image":"https://www.wtcmanila.com.ph/wp-content/uploads/2022/08/rear-view-of-audience-in-the-conference-hall-or-se-2021-08-30-06-51-57-utc-1.jpg","date":"2025-08-03","description":"A presentation event","id":"84245635-97ff-40c6-ac5e-fc2b7c88c241"},{"title":"Wedding","image":"https://wallpapercave.com/wp/wp7488460.jpg","date":"2025-07-31","description":"Wedding of friend no. 1","id":"edc58583-e806-4a00-80f8-b004a284f754"}]}
+{
+  "events": [
+    {
+      "title": "A new event",
+      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
+      "date": "2022-10-01",
+      "description": "Some awesome event!",
+      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
+    }
+  ],
+  "users": []
+}
