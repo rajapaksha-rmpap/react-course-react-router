@@ -13,6 +13,8 @@ export default function ErrorPage() {
     message = "Page or resource not found";
   }
 
+  console.log(error);
+
   return (
     <>
       <MainNavigation />

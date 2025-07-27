@@ -6,6 +6,7 @@ import {
   redirect,
 } from "react-router-dom";
 
+import { getToken } from "../util/auth.js";
 import { BASE_URL } from "../config.js";
 
 import classes from "./EventForm.module.css";
@@ -41,7 +42,10 @@ export async function action({ request, params }) {
     const response = await fetch(url, {
       method: request.method,
       body: JSON.stringify({ title, image, date, description }),
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + getToken(),
+      },
     });
 
     if (response.status === 422) {

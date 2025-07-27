@@ -30,3 +30,15 @@
   border: none;
   color: var(--color-primary-800);
 }
+
+.errorHeader {
+  min-width: 30rem;
+  max-width: 40rem;
+  padding: 20px;
+  margin-bottom: 40px;
+
+  text-align: left;
+
+  background-color: indianred;
+  color: white;
+}

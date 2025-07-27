@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom";
+import { useRouteLoaderData, Link } from "react-router-dom";
 
 import classes from "./EventsList.module.css";
 
 function EventsList({ events }) {
+  const { isUserAuthenticated } = useRouteLoaderData("root");
+
   return (
     <div className={classes.events}>
       <div className={classes.header}>
         <h1>All Events</h1>
-        <Link className={classes.button} to="new">
-          New Event
-        </Link>
+        {isUserAuthenticated && (
+          <Link className={classes.button} to="new">
+            New Event
+          </Link>
+        )}
       </div>
       <ul className={classes.list}>
         {events.map((event) => (

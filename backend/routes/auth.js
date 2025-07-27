@@ -11,14 +11,16 @@ router.post("/signup", async (req, res, next) => {
 
   if (!isValidEmail(data.email)) {
     errors.email = "Invalid email.";
-  } else {
-    try {
-      const existingUser = await get(data.email);
-      if (existingUser) {
-        errors.email = "Email exists already.";
-      }
-    } catch (error) {}
   }
+
+  try {
+    const existingUser = await get(data.email);
+    if (existingUser)
+      return res.status(409).json({
+        message:
+          "The Email has already been registered. Please try signing in.",
+      });
+  } catch (error) {}
 
   if (!isValidText(data.password, 6)) {
     errors.password = "Invalid password. Must be at least 6 characters long.";
@@ -26,7 +28,7 @@ router.post("/signup", async (req, res, next) => {
 
   if (Object.keys(errors).length > 0) {
     return res.status(422).json({
-      message: "User signup failed due to validation errors.",
+      message: "Signup failed due to validation errors.",
       errors,
     });
   }
@@ -50,14 +52,15 @@ router.post("/login", async (req, res) => {
   try {
     user = await get(email);
   } catch (error) {
-    return res.status(401).json({ message: "Authentication failed." });
+    return res.status(401).json({
+      message: "The email has not been registered. Try signing up instead.",
+    });
   }
 
   const pwIsValid = await isValidPassword(password, user.password);
   if (!pwIsValid) {
     return res.status(422).json({
-      message: "Invalid credentials.",
-      errors: { credentials: "Invalid email or password entered." },
+      message: "Invalid email or password",
     });
   }
 

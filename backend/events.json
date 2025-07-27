@@ -1,12 +1,1 @@
-{
-  "events": [
-    {
-      "title": "A new event",
-      "image": "https://cdn.muenchen-p.de/fl_progressive,q_65/.imaging/stk/responsive/teaser300/dms/va-2016/muenchner-christkindlmarkt/christkindlmarkt-marienplat-logo-hp/document/christkindlmarkt-marienplat-logo-hp.jpg",
-      "date": "2022-10-01",
-      "description": "Some awesome event!",
-      "id": "2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"
-    }
-  ],
-  "users": []
-}
+{"events":[{"title":"Birthday Party","image":"https://static.vecteezy.com/system/resources/previews/029/317/657/non_2x/celebration-setting-lively-decorations-make-for-a-spirited-birthday-party-background-ai-generated-photo.jpg","date":"2025-11-29","description":"Someone's Birthday party","id":"5e9f0d54-c65e-4669-9351-5190c2ac7dea"},{"title":"Final Presentation","image":"https://www.allbusiness.com/asset/2016/12/Presentation.jpg","date":"2025-08-15","description":"The presentation of FYP","id":"7e75ceab-a6b0-4ef4-b23d-3b61e54e327a"},{"title":"A new event","image":"https://wallpapercave.com/wp/wp7488400.jpg","date":"2022-10-01","description":"Some awesome event!","id":"2a42fcc4-ea21-4bdd-abf6-c40006dc66a9"}],"users":[{"email":"rajapaksharmpap@gmail.com","password":"$2a$12$TiE8DZDB4Hn.WmvALp4a6eJqRQz8D2xcJQ666U3O.ws7IHRX9ljNe","id":"f0eef465-6643-4b90-a1d5-e72f15ce549b"},{"email":"akila123@gmail.com","password":"$2a$12$7MTK72rJlN.Ss2OnJqpRfOQp2i8DTGMYa0IaS.gjnc5drOW6o2muG","id":"4f301550-bb00-4cb4-8370-eb1599f43f59"}]}
